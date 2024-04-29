@@ -1,0 +1,157 @@
+﻿@model EmpEx1.Models.EmpVM
+
+<html>
+    <head>
+	<link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+	<script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</head>
+    <body>
+	<form asp-action="Create" method="post">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 bg-primary-subtle">
+					<div >
+						<label asp-for="EmpName"></label>
+						<div>
+							<input asp-for="EmpName" />
+						</div>
+					</div>
+					<div class="row">
+
+
+						<table class="table-borderless bg-primary-subtle">
+							<tr>
+
+								<td>CollegeName</td>
+								<td>Field</td>
+								<td>TotalMarks</td>
+								<td>ObtainMarks</td>
+								<td>standard</td>
+							</tr>
+
+							<tr>
+
+
+
+
+								<td>
+
+									<textarea name="CollegeName"></textarea>
+								</td>
+
+								<td>
+									<input type="text" name="Field" />
+								</td>
+
+								<td>
+									<input type="text" name="TotalMarks" />
+								</td>
+
+								<td>
+									<input type="text" name="ObtainMarks" />
+								</td>
+
+								<td>
+									<input type="text" name="standard" />
+								</td>
+
+
+							</tr>
+							<tr>
+
+
+								<td>
+
+									<textarea name="CollegeName"></textarea>
+								</td>
+
+								<td>
+									<input type="text" name="Field" />
+								</td>
+
+								<td>
+									<input type="text" name="TotalMarks" />
+								</td>
+
+								<td>
+									<input type="text" name="ObtainMarks" />
+								</td>
+
+								<td>
+									<input type="text" name="standard" />
+								</td>
+
+
+							</tr>
+							<tr>
+
+
+								<td>
+
+									<textarea name="CollegeName"></textarea>
+								</td>
+
+								<td>
+									<input type="text" name="Field" />
+								</td>
+
+								<td>
+									<input type="text" name="TotalMarks" />
+								</td>
+
+								<td>
+									<input type="text" name="ObtainMarks" />
+								</td>
+
+								<td>
+									<input type="text" name="standard" />
+								</td>
+
+
+							</tr>
+							<tr>
+
+
+								<td>
+
+									<textarea name="CollegeName"></textarea>
+								</td>
+
+								<td>
+									<input type="text" name="Field" />
+								</td>
+
+								<td>
+									<input type="text" name="TotalMarks" />
+								</td>
+
+								<td>
+									<input type="text" name="ObtainMarks" />
+								</td>
+
+								<td>
+									<input type="text" name="standard" />
+								</td>
+
+
+							</tr>
+
+
+
+						</table>
+					</div>
+
+				</div>
+
+
+			</div>
+			
+		</div>
+		<div class="bg-primary-subtle">
+			<input type="submit" value="save" />
+		</div>
+	</form>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+﻿@model IEnumerable<EmpEx1.Models.EmpEducation>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+   
+   
+   
+   @*  <script src="~/jquery/jquery.js"></script>
+    <script src="~/jquery-validate/additional-methods.js"></script>
+    <script src="~/jquery-validate/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+ *@
+    
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+   
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+</head>
+<body>
+  <div class="container-sm">
+      <div class="row">
+            <form asp-action="SearchbyName">
+                @Html.DisplayNameFor(p => p.Emp.EmpName)
+                @Html.DropDownList("Ename", "Select Emp")
+
+                <input type="submit" value="save" class="btn btn-secondary" />
+
+            </form>
+            <p>
+                <a asp-action="Create" class="btn btn-success">Create New</a>
+            </p>
+            <table class="table border-secondary">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Emp.EmpName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CollegeName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Field)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TotalMarks)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ObtainMarks)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.standard)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Emp.EmpName)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.CollegeName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Field)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TotalMarks)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ObtainMarks)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.standard)
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.EmpEducationID" asp-route-eid="@item.Emp.EmpID" class="btn btn-primary">Edit</a> |
+                                <a asp-action="Details" asp-route-id="@item.EmpEducationID" class="btn btn-secondary">Details</a> |
+                                <a asp-action="Delete" asp-route-id="@item.EmpEducationID" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+      </div>
+
+  </div>
+</body>
+</html>
